@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Football Player Price Predictor</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+	<nav class="navbar navbar-light" style="background-color: #0a744b;">
+		<!-- Navbar content -->
+			<h1 style="color: #ffffff;text-align: center;"><i class="fas fa-futbol"></i> Football Player Price Predictor <i class="fas fa-futbol"></i></h1>
+
+	  </nav>
+    
+
+
+<div class=" container" style="align-content: center;">
+
+	<form method="post" action="/predict" style="align-content: center;">
+		 <div class="form-group">
+			 <label>FPL_VALUE</label>
+			<input type="text" name="fpl_value" class="form-group">
+		 </div>
+		
+		<div class="form-group">
+			<label for="nationality">Nationality</label>
+		   <select name="nationality" id="nationality" class="form-contol">
+			   <option value="England">England</option>
+			   <option value="France">France</option>
+			   <option value="Spain">Spain</option>
+			   <option value="Wales">Wales</option>
+			   <option value="Germany">Germany</option>
+			   <option value="Serbia">Serbia</option>
+			   <option value="Egypt">Egypt</option>
+			   <option value="Ireland">Ireland</option>
+			   <option value="Congo DR">Congo DR</option>
+			   <option value="Austria">Austria</option>
+			   <option value="Senegal">Senegal</option>
+			   <option value="Slovenia">Slovenia</option>
+			   <option value="Argentina">Argentina</option>
+			   <option value="Belgium">Belgium</option>
+			   <option value="Netherlands">Netherlands</option>
+			   <option value="Northern Ireland">Northern Ireland</option>
+			   <option value="Scotland">Scotland</option>
+			   <option value="Uruguay">Uruguay</option>
+			   <option value="Italy">Italy</option>
+			   <option value="Australia">Australia</option>
+			   <option value="Bosnia">Bosnia</option>
+			   <option value="Israel">Israel</option>
+			   <option value="Nigeria">Nigeria</option>
+			   <option value="Mali">Mali</option>
+			   <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+			   <option value="Brazil">Brazil</option>
+			   <option value="Sweden">Sweden</option>
+			   <option value="Switzerland">Switzerland</option>
+			   <option value="Estonia">Estonia</option>
+			   <option value="Cameroon">Cameroon</option>
+			   <option value="Iceland">Iceland</option>
+			   <option value="Tunisia">Tunisia</option>
+			   <option value="Portugal">Portugal</option>
+			   <option value="Denmark">Denmark</option>
+			   <option value="Algeria">Algeria</option>
+			   <option value="New Zealand">New Zealand</option>
+			   <option value="Ghana">Ghana</option>
+			   <option value="Armenia">Armenia</option>
+			   <option value="Japan">Japan</option>
+			   <option value="South Korea">South Korea</option>
+			   <option value="The Gambia">The Gambia</option>
+			   <option value="Venezuela">Venezuela</option>
+			   <option value="United States">United States</option>
+			   <option value="Benin">Benin</option>
+			   <option value="Kenya">Kenya</option>
+			   <option value="Croatia">Croatia</option>
+			   <option value="Curacao">Curacao</option>
+			   <option value="Bermuda">Bermuda</option>
+			   <option value="Czech Republic">Czech Republic</option>
+			   <option value="Finland">Finland</option>
+			   <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+			   <option value="Canada">Canada</option>
+			   <option value="Jamaica">Jamaica</option>
+			   <option value="Colombia">Colombia</option>
+			   <option value="Ecuador">Ecuador</option>
+			   <option value="Chile">Chile</option>
+			   <option value="Norway">Norway</option>
+			   <option value="Romania">Romania</option>
+			   <option value="Poland">Poland</option>
+			   <option value="Greece">Greece</option>
+			   <option value="Morocco">Morocco</option>
+		   </select>
+		</div>
+	
+		<div class="form-group">
+			<label>Page Views</label>
+			<input type="text" name="page_views" class="form-contol">
+		</div>
+	
+		<div class="form-group">
+			<label>Fpl Points</label>
+			<input type="text" name="fpl_points" class="form-contol">
+		</div>
+	
+		<div class="form-group">
+			<label for="posCat">Position Category</label>
+			<select name="posCat" id="posCat" class="form-contol">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			</select>
+		</div>
+	
+		<div class="form-group">
+			<label>New Signing or Not </label>
+			<input type="text" name="new_signing" class="form-contol">
+		</div>
+		
+	   
+		<div class="form-group">
+			<label for="newForeign">New Foreign</label>
+			<select class="form-contol" name="newForeign" id="newForeign">
+			  <option value="0">0</option>
+			  <option value="1">1</option>
+			</select>
+		</div>
+	
+		<div class="form-group">
+			<label>Fpl Sel</label>
+			<input type="text" name="fpl_sel" class="form-contol">
+		</div>
+	
+		<div class="form-group">
+			<label for="Region">Region</label>
+			<select name="Region" id="Region" class="form-contol">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			</select>
+		</div>
+	
+	
+		<div class="form-group">
+			<label for="clubId">Club Id</label>
+			<select name="clubId" id="clubId" class="form-contol">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+			</select>
+		</div>
+	
+		<div class="form-group">
+			<label for="AgeCat">Age Category</label>
+			<select name="AgeCat" id="AgeCat" class="form-contol">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			  <option value="6">6</option>
+			</select>
+		</div>
+	
+	   
+		<div class="form-group">
+			<label for="BigClub">Big Club</label>
+			<select name="BigClub" id="BigClub" class="form-contol">
+			  <option value="0">0</option>
+			  <option value="1">1</option>
+			</select>
+		</div>
+	
+		<input type="submit" value="Predict">
+	</form>
+</div>
+
+<h2 style='text-align: center;'>Predicted Market value of the Player is: {% if result %}<p>{{ result }}</p>{% endif %}</h2>
+</body>
+</html>
